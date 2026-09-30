@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4 Büyükler: Şampiyonlar Kupası - Destek Sayfası</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; margin: 0; padding: 40px 20px; color: #333; display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
+        h1 { color: #2c3e50; margin-bottom: 25px; font-weight: 600; text-align: center; }
+        .nav-buttons { display: flex; gap: 10px; margin-bottom: 25px; flex-wrap: wrap; justify-content: center; }
+        .nav-buttons button { background: #fff; border: 1px solid #dcdde1; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-size: 14px; font-weight: 500; color: #57606f; transition: all 0.2s ease; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .nav-buttons button:hover, .nav-buttons button.active { background: #f1f2f6; border-color: #a4b0be; color: #2f3542; }
+        .card { background: #fff; width: 100%; max-width: 750px; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); box-sizing: border-box; }
+        .section { display: none; }
+        .section.active { display: block; }
+        h2 { color: #2c3e50; border-bottom: 1px solid #eee; padding-bottom: 10px; margin-top: 0; font-size: 22px; }
+        p { line-height: 1.6; color: #555; font-size: 15px; }
+        .footer-email { margin-top: 30px; font-size: 14px; color: #666; }
+        .footer-email a { color: #0984e3; text-decoration: none; }
+    </style>
+</head>
+<body>
+
+    <h1>4 Büyükler: Şampiyonlar Kupası Destek Sayfası</h1>
+
+    <div class="nav-buttons">
+        <button class="active" onclick="showSection('hakkinda', this)">Hakkında</button>
+        <button onclick="showSection('gizlilik', this)">Gizlilik Politikası</button>
+        <button onclick="showSection('iletisim', this)">İletişim</button>
+        <button onclick="showSection('eula', this)">EULA</button>
+    </div>
+
+    <div class="card">
+        <!-- Hakkında Sekmesi -->
+        <div id="hakkinda" class="section active">
+            <h2>Hakkında</h2>
+            <p>4 Büyükler: Şampiyonlar Kupası, mobil cihazlar için geliştirilmiş rekabetçi bir futbol penaltı ve turnuva oyunudur. En iyi vuruşları yaparak kaleciyi alt et, kupaları topla ve heyecanın tadını çıkar.</p>
+            <p>Bu uygulama Google Play platformu için Diamond Game Studio tarafından tasarlanmıştır.</p>
+        </div>
+
+        <!-- Gizlilik Politikası Sekmesi -->
+        <div id="gizlilik" class="section">
+            <h2>Gizlilik Politikası</h2>
+            <p>Bu uygulama kullanıcının gizliliğine en üst düzeyde önem verir. Uygulamayı kullanırken hiçbir kişisel veri (ad, e-posta, konum, telefon numarası vb.) toplanmaz, kaydedilmez veya paylaşılmaz.</p>
+            <p>Uygulama içerisinde herhangi bir üçüncü taraf yazılım, analiz aracı, reklam platformu veya kullanıcı verilerini toplayabilecek bileşen bulunmaz.</p>
+            <p>Uygulama çevrimdışı çalışabilir ve hiçbir şekilde kullanıcıdan veri istemez. Kullanıcının uygulamayı kullanması sırasında hiçbir kişisel veya hassas bilgi cihazdan dışarı aktarılmaz.</p>
+            <p>In-app purchase (uygulama içi satın alım) işlemleriniz tamamen Google Play altyapısı üzerinden güvenli bir şekilde yürütülür ve finansal bilgileriniz tarafımızca asla görünmez veya saklanmaz.</p>
+        </div>
+
+        <!-- İletişim Sekmesi -->
+        <div id="iletisim" class="section">
+            <h2>İletişim</h2>
+            <p>Uygulama ile ilgili her türlü soru, öneri, destek talebi veya geri bildiriminiz için bizimle iletişime geçebilirsiniz.</p>
+            <div class="footer-email">
+                Destek için bizimle <a href="mailto:ameomuradov@gmail.com">ameomuradov@gmail.com</a> adresinden iletişime geçebilirsiniz.
+            </div>
+        </div>
+
+        <!-- EULA Sekmesi -->
+        <div id="eula" class="section">
+            <h2>Son Kullanıcı Lisans Sözleşmesi (EULA)</h2>
+            <p>4 Büyükler: Şampiyonlar Kupası oyununu indirerek ve kullanarak, oyunun tüm telif haklarının ve fikri mülkiyet haklarının geliştiriciye ait olduğunu kabul etmiş sayılırsınız.</p>
+            <p>Uygulama olduğu gibi sunulur; kullanıcılar oyun içi deneyimlerden kendi sorumluluklarıyla yararlanır.</p>
+        </div>
+    </div>
+
+    <script>
+        function showSection(sectionId, btn) {
+            document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+            document.querySelectorAll('.nav-buttons button').forEach(b => b.classList.remove('active'));
+            document.getElementById(sectionId).classList.add('active');
+            btn.classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
